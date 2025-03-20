@@ -35,10 +35,6 @@ a:hover {
     color: hsl(291, 20%, 34%);
 }
 
-main {
-    display: flex;
-}
-
 
 .container {
     background-color: #fff;
