@@ -11,12 +11,12 @@ function initAccordion() {
         }
 
         function toggleIcon(element) {
-            const img = element.querySelector('img'); // Seleciona a imagem dentro do <dt>
+            const img = element.querySelector('img'); // img in dt
             if (element.classList.contains(ativoClass)) {
-                img.src = 'assets/images/icon-minus.svg'; // Ícone aberto
+                img.src = 'assets/images/icon-minus.svg'; // opened
                 img.alt = 'minus icon';
             } else {
-                img.src = 'assets/images/icon-plus.svg'; // Ícone fechado
+                img.src = 'assets/images/icon-plus.svg'; // closed
                 img.alt = 'plus icon';
             }
         }
