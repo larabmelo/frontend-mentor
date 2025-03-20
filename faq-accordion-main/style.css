@@ -4,56 +4,52 @@
         url('WorkSans-VariableFont_wght.ttf');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    margin-left: 0;
-}
-
-html, body {
-    margin: 0;
-    height: 100%;
-}
-
 body {
+    margin: 80px;
+    padding: 0;
     font-family: 'Work Sans';
+    display: block;
     background-color: hsl(275, 100%, 97%);
     background-image: url(assets/images/background-pattern-desktop.svg);
-    background-size: 100%;
-    background-position: top center;
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
+    background-size: 100% auto;
+    background-position: top center; /* Stick to the top */
+    background-repeat: no-repeat; /* No repetition */
 }
 
 a {
+<<<<<<< HEAD
     text-decoration: underline;
     color:hsl(270, 100%, 0%);
 }
 
 a:hover {
     color: hsl(291, 20%, 34%);
+=======
+    text-decoration: none;
+>>>>>>> parent of f74e706 (changes to add mobile)
 }
 
 
 .container {
     background-color: #fff;
-    margin: 5rem auto 0;
     border-radius: 10px;
     max-width: 500px;
-    padding: 2rem;
+    padding: 30px;
+    margin: auto;
     box-shadow: rgba(100, 100, 111, 0.15) 5px 10px 30px;
+    align-self: start; /* Alinha ao topo da segunda linha do grid */
+    z-index: 10; /* Garante que fique acima da imagem */
 }
 
 
 h1 {
-    font-size: 3rem;
+    font-size: 48px;
     color: hsl(292, 42%, 14%);
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1.5rem;
-    margin: 1.25rem 0.75rem;
+    gap: 24px;
+    margin: 20px 5px 30px 5px;
 }
 
 .faq-lista dt {
@@ -63,9 +59,9 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.25rem;
-    margin-top: 0.63rem;
-    margin-bottom: 0.63rem;
+    padding-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .faq-lista dt:hover {
@@ -84,8 +80,9 @@ h1 {
 }
 
 .faq-lista dd {
-    font-size: 1rem;
+    font-size: 16px;
     color: hsl(292, 16%, 49%);
+    margin-left: 0;
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -99,30 +96,10 @@ img {
 }
 
 footer {
-    padding-top: 2rem;
+    padding-top: 50px;
     color: hsl(292, 42%, 14%);;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-@media (max-width: 580px) {
-    body {
-        background-size: 150%;
-    }
-
-    .container {
-        padding: 1rem;
-    }
-
-    h1 {
-        font-size: 2rem;
-        gap: 1rem;
-        margin: 0.75rem 0.25rem;
-    }
-
-    footer {
-        padding-top: 2rem;
-    }
 }
