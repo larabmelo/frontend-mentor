@@ -4,31 +4,39 @@
         url('WorkSans-VariableFont_wght.ttf');
 }
 
-body {
-    margin: 80px;
+* {
+    margin: 0;
+    box-sizing: border-box;
     padding: 0;
+}
+
+body {
     font-family: 'Work Sans';
-    display: block;
     background-color: hsl(275, 100%, 97%);
     background-image: url(assets/images/background-pattern-desktop.svg);
     background-size: 100% auto;
-    background-position: top center; /* Stick to the top */
-    background-repeat: no-repeat; /* No repetition */
+    background-position: top center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 a {
-<<<<<<< HEAD
     text-decoration: underline;
-    color:hsl(270, 100%, 0%);
+    color: hsl(292, 42%, 14%);
 }
 
 a:hover {
-    color: hsl(291, 20%, 34%);
-=======
-    text-decoration: none;
->>>>>>> parent of f74e706 (changes to add mobile)
+    color: hsl(293, 44%, 35%);
+    cursor: pointer;
 }
 
+main {
+    display: flex;
+    align-items:  center;
+    margin: 3rem auto;
+}
 
 .container {
     background-color: #fff;
@@ -37,8 +45,6 @@ a:hover {
     padding: 30px;
     margin: auto;
     box-shadow: rgba(100, 100, 111, 0.15) 5px 10px 30px;
-    align-self: start; /* Alinha ao topo da segunda linha do grid */
-    z-index: 10; /* Garante que fique acima da imagem */
 }
 
 
@@ -96,10 +102,13 @@ img {
 }
 
 footer {
-    padding-top: 50px;
-    color: hsl(292, 42%, 14%);;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;             
+    justify-content: center;   
+    align-items: center;      
+    margin: auto;          
+    min-height: 50px;          
+    color: hsl(292, 42%, 14%);
+    padding: 1rem;
     text-align: center;
 }
+
