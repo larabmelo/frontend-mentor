@@ -48,7 +48,7 @@ main {
 .faq-lista dt:hover {
     cursor: pointer;
     color: #AD28EB;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
 }
 
 .accordion-button {
@@ -65,7 +65,7 @@ main {
 .accordion-button:focus {
     outline: 2px solid #AD28EB;
     border-radius: 4px;
-    box-shadow: 0 0 6px rgba(173, 40, 235, 0.5);
+    box-shadow: 0 0 6px #AD28EB; 
 }
 
 .js-accordion dd.ativo {
