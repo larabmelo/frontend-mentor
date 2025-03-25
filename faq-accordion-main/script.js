@@ -1,28 +1,31 @@
-
 function initAccordion() {
-    const accordionList = document.querySelectorAll('.js-accordion dt');
+    const accordion = document.querySelector('.js-accordion');
     const ativoClass = 'ativo';
 
-    if (accordionList.length) {
-        function activeAccordion() {
-            this.classList.toggle(ativoClass);
-            this.nextElementSibling.classList.toggle(ativoClass);
-            toggleIcon(this); 
-        }
+    if (accordion) {
+        accordion.addEventListener('click', function(event) {
+            const button = event.target.closest('.accordion-button');
+            if (!button) return; // exit if click isn't on a button
 
-        function toggleIcon(element) {
-            const img = element.querySelector('img'); // Seleciona a imagem dentro do <dt>
-            if (element.classList.contains(ativoClass)) {
-                img.src = 'assets/images/icon-minus.svg'; // Ícone aberto
-                img.alt = 'minus icon';
-            } else {
-                img.src = 'assets/images/icon-plus.svg'; // Ícone fechado
-                img.alt = 'plus icon';
-            }
-        }
+            const dt = button.parentElement;
+            const dd = dt.nextElementSibling;
 
-        accordionList.forEach((item) => {
-            item.addEventListener('click', activeAccordion);
+            // toggle active class
+            dt.classList.toggle(ativoClass);
+            dd.classList.toggle(ativoClass);
+
+            // update ARIA attribute
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+
+            // toggle icon
+            const img = button.querySelector('img');
+            img.src = dt.classList.contains(ativoClass) 
+                ? 'assets/images/icon-minus.svg' 
+                : 'assets/images/icon-plus.svg';
+            img.alt = dt.classList.contains(ativoClass) 
+                ? 'minus icon' 
+                : 'plus icon';
         });
     }
 }

@@ -34,22 +34,21 @@ main {
     box-shadow: rgba(100, 100, 111, 0.15) 5px 20px 30px;
 }
 
-
 .faq-lista dt {
     font-weight: 600;
     color: hsl(292, 42%, 14%);
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0; 
+    transition: color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .faq-lista dt:hover {
     cursor: pointer;
     color: #AD28EB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .accordion-button {
@@ -66,6 +65,7 @@ main {
 .accordion-button:focus {
     outline: 2px solid #AD28EB;
     border-radius: 4px;
+    box-shadow: 0 0 6px rgba(173, 40, 235, 0.5);
 }
 
 .js-accordion dd.ativo {
@@ -93,10 +93,9 @@ h1 {
     font-size: 3rem;
     color: hsl(292, 42%, 14%);
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 24px;
-    margin: 20px 5px 30px 5px;
+    margin: 20px 5px 30px;
 }
 
 .faq-lista dt:nth-child(n+2) {
@@ -113,9 +112,7 @@ h1 img {
     list-style: none;
 }
 
-
 @media (max-width: 500px) {
-
     body {
         background-size: 200%;
         background-position: top center;
