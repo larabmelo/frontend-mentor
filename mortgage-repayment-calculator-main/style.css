@@ -1,0 +1,125 @@
+/* Global */
+
+:root {
+    --button: #D9DB30;
+    --bg: #E3F4FC;
+    --h1: #133040;
+    --clear: #77878D;
+    --labels: #586D75;
+    --border: #586D75;
+    --border-active: #D9DB30;
+    --bg-input: #F6F6DB;
+    --error: #D30306;
+    --bg-results: #133040;
+    --bg-results-completed: #082432;
+    --p-results: #9CBBCF;
+    --h2-results: #fff;
+    --monthly-repayments: #D9DB30;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans Variable Font';
+    src: url(assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+/* Reset */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, ul, p, blockquote, dd {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /*herda do conteudo pai*/
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    /* height auto cresce de acordo com a imagem */
+    display: block;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: var(--bg);
+    font-family: 'Plus Jakarta Sans Variable Font', sans-serif;
+}
+
+main {
+    max-width: 900px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.mortgage-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+}
+
+form {
+    flex: 1;
+    padding: 2rem;
+}
+
+.form-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: space-between;
+}
+
+form h1 {
+    font-size: 1.5rem;
+    color: var(--h1);
+}
+
+.clear-button {
+    border: 0;
+    background-color: transparent;
+    text-decoration: underline;
+    font-weight: 500;
+    color: var(--clear);
+}
+
+
+#mortgage-results {
+    flex: 1;
+    background-color: var(--bg-results);
+    border-radius: 0 24px 24px 80px;
+    padding: 2rem;
+}
+
+#mortgage-results-completed {
+    display: none;
+}

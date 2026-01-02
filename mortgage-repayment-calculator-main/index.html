@@ -5,57 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <section class="mortgage-container">
+      
+        <form id="mortgage-calculator-form">
+          <div class="form-header">
+            <h1>Mortgage Calculator</h1>
+            <button type="button" class="clear-button">Clear all</button>
+          </div>
+          
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <input type="number" id="mortgage-amount" name="mortgage-amount">
 
-  Mortgage Calculator
-  Clear All
+          <label for="mortgage-term">Mortgage Term</label>
+          <input type="number" name="mortgage-term" id="mortgage-term">
 
-  Mortgage Amount
-
-  Mortgage Term
-
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
-
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <label for="interest-rate">Interest Rate</label>
+          <input type="number" name="interest-rate" id="interest-rate">
+          
+          <fieldset>
+            <legend>Mortgage Type</legend>
+            <label>
+              <input type="radio" name="repayment" id="repayment">
+            Repayment
+            </label>
+            <label>
+              <input type="radio" name="interest-only" id="interest-only">
+            Interest Only
+            </label>
+          </fieldset>
+          <button type="submit">Calculate Repayments</button>
+        </form>
+      
+      <section id="mortgage-results" aria-live="polite">
+        <div id="mortgage-results-empty">
+          <img src="assets/images/illustration-empty.svg" alt="Calculator Illustration">
+          <h2>Results shown here</h2>
+          <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+        </div>
+        <div id="mortgage-results-completed">
+          <h2>Your results</h2>
+          <p>Your results are shown below based on the information you provided. To adjust the results, edit the form and click "calculate repayments" again.</p>
+        <div class="results-container">
+          <div class="monthly-repayments">
+            <h3>Your monthly repayments</h3>
+            <p class="value-monthly-repayments"></p>
+          </div>
+          <div class="total-repayments">
+            <h3>Total you'll repay over the term</h3>
+            <p class="value-total-repayments"></p>
+          </div>
+          
+        </div>
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer>
+    Challenge by
+    <a href="https://www.frontendmentor.io/" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="https://github.com/larabmelo">Lara Melo</a>.
+  </footer>
 </body>
 </html>
